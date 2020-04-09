@@ -26,10 +26,10 @@ class BlogController extends AbstractController
      /**
      * @route("/blog/{id}/view", name="blog_view")
      */
-    public fonction view(Article $article){
+    public function view(Article $article){
         return $this->render('blog/view.html.twig', [
             'controller_name' => 'bienvenue sur l\'article', 
-
-
+            'article' => $article
+            ]);
     }
 }
